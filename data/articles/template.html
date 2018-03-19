@@ -7,22 +7,22 @@
   <meta property="og:type" content="article">
   <meta property="og:title" content="${articletitle;string(camelcase)}">
   <meta property="og:description" content="${metadescription;string}">
-  <meta property="og:image" content="${mainimage;link}">
+  <meta property="og:image" content="https://warrior.accountants/data/images/${mainimage;string}">
   <meta property="og:site_name" content="Warrior Business Services">
-  <meta property="og:url" content="${canonicalurl;link}">
+  <meta property="og:url" content="https://warrior.accountants/article/${articlecategory;string}/${articletitle;string}">
   <meta property="article:publisher" content="https://www.facebook.com/warrior.accountants/">
   <meta property="article:published_time" content="${datepublished;date(op=medium;otz=GMT-5)}">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:url" content="${canonicalurl;link}">
+  <meta name="twitter:url" content="https://warrior.accountants/article/${articlecategory;string}/${articletitle;string}">
   <meta name="twitter:title" content="${articletitle;string(camelcase)}">
   <meta name="twitter:description" content="${metadescription;string}">
-  <meta name="twitter:image:src" content="${mainimage;link}">
+  <meta name="twitter:image:src" content="https://warrior.accountants/data/images/${mainimage;string}">
   <meta name="twitter:site" content="@warriorcpa">
   <script type="application/ld+json">
     {
       "@context": "http://schema.org",
       "@type": "NewsArticle",
-      "mainEntityOfPage": "${canonicalurl;link}",
+      "mainEntityOfPage": "https://warrior.accountants/article/${articlecategory;string}/${articletitle;string}",
       "headline": "${articletitle;string(camelcase)}",
       "datePublished": "${datepublished;date(op=medium;otz=GMT-5)}T09:59:00+00:00",
       "dateModified": "${datemodified;date(otz=GMT-5)}T05:55:47.903360+00:00",
@@ -43,7 +43,7 @@
       },
       "image": {
         "@type": "ImageObject",
-        "url": "${mainimage;link}",
+        "url": "https://warrior.accountants/data/images/${mainimage;string}",
         "width": "1440",
         "height": "810"
       }
@@ -68,3 +68,30 @@
 </body>
 
 </html>
+
+<!-- END Copy & Paste of HTML -->
+
+<!-- START Copy & Paste of category.json content -->
+
+{
+  "title": "${articletitle;string}",
+  "time": "${datemodified;date(otz=GMT-5)} 19:40:00 +0000",
+  "author": "Daniel Hodges",
+  "category": "${articlecategory;string}",
+  "id": "${urlslug;string}",
+  "imgSrc": "images/${mainimage;string}",
+  "placeholder": "data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAA8AAD/4QMxaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzExMSA3OS4xNTgzMjUsIDIwMTUvMDkvMTAtMDE6MTA6MjAgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjJFNTQzRDI0QTM4RTExRTY5NjdCRDcxN0ZDQzkwNzU3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjJFNTQzRDIzQTM4RTExRTY5NjdCRDcxN0ZDQzkwNzU3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE1IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MUYyN0U2RkRBMzg3MTFFNjk2N0JENzE3RkNDOTA3NTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MUYyN0U2RkVBMzg3MTFFNjk2N0JENzE3RkNDOTA3NTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAmQWRvYmUAZMAAAAABAwAVBAMGCg0AAATiAAAFEgAABUsAAAV4/9sAhAAGBAQEBQQGBQUGCQYFBgkLCAYGCAsMCgoLCgoMEAwMDAwMDBAMDg8QDw4MExMUFBMTHBsbGxwfHx8fHx8fHx8fAQcHBw0MDRgQEBgaFREVGh8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx//wgARCAAGAAoDAREAAhEBAxEB/8QAhwABAQAAAAAAAAAAAAAAAAAABQYBAQAAAAAAAAAAAAAAAAAAAAAQAAIDAQAAAAAAAAAAAAAAABADAAEEJBEAAQMDBQAAAAAAAAAAAAAAAgABEdESA0JiEzOjEgEAAAAAAAAAAAAAAAAAAAAQEwEAAgIDAQAAAAAAAAAAAAABEBEhMQBRkaH/2gAMAwEAAhEDEQAAAa0WP//aAAgBAQABBQLWp97OKf/aAAgBAgABBQIf/9oACAEDAAEFAh//2gAIAQICBj8CP//aAAgBAwIGPwI//9oACAEBAQY/ArgzEOOG5QZim3bDLT1eVF//2gAIAQEDAT8hYJl0gXNk3nWYR//aAAgBAgMBPyGP/9oACAEDAwE/IY//2gAMAwEAAhEDEQAAEEP/2gAIAQEDAT8Qf2TjokQgNtX5fTw4f//aAAgBAgMBPxCP/9oACAEDAwE/EI//2Q==",
+  "summary": "${articlesubheading;string}",
+  "contentLength": ${contentlength;string}
+}
+
+<!-- END Copy & Paste of category.json content -->
+
+<!-- Edit Form Content URL -->
+<!-- NOTE: Must resubmit form after editing the form to run the automation again -->
+
+${editResponseUrl;string}
+
+<!-- Page URL -->
+
+https://warrior.accountants/article/${articlecategory;string}/${articletitle;string}
